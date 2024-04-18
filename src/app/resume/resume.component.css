@@ -1,0 +1,31 @@
+.main-resume{
+    background-color: rgba(3, 4, 27, 0.918);
+    color: rgb(84, 106, 124);
+    padding: 10px;
+    border: 3px solid rgba(2, 11, 51, 0.459);
+    border-radius: 15px;
+}
+.main-info{
+   
+    margin: auto;
+    width: 50%;
+    border: 3px solid rgba(2, 11, 51, 0.459);
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+}
+.photo{
+    border-radius: 5px;
+}
+.about-person{
+    margin: auto;
+    width: 50%;
+    border: 3px solid rgba(2, 11, 51, 0.459);
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+}
+.person-mage{
+    width: 50%;
+    border-radius: 5px;
+}

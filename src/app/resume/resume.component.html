@@ -1,0 +1,46 @@
+<div class="main-resume">
+    <div class="main-info">
+        <h1>{{DominicResumeData.name}}</h1>
+        <h2>{{DominicResumeData.lastName}} </h2>
+        <img class="photo" src="{{DominicResumeData.photo}}"/>        
+    </div>
+    <div class="about-person">
+        
+        <h2>Address: {{DominicResumeData.address}} </h2>
+        <h3>Email: {{DominicResumeData.email}} </h3>
+        <h3>Phone : {{DominicResumeData.phone}} </h3>
+        <p></p>
+        <h3>Certificates :</h3>
+        <app-certificates></app-certificates>
+        <p></p>
+        <h3>Expearens :</h3>
+        @for (item of DominicResumeData.experience; track item) 
+        {
+            <li>{{ item}}</li>
+        } @empty 
+        {
+            <li>There are no expearens.</li>
+        }
+        <p></p>
+        <h3>Skills :</h3>
+        @for (item of DominicResumeData.skills; track item) 
+        {
+            <li>{{ item}}</li>
+        } @empty 
+        {
+            <li>There are no skills.</li>
+        }
+        <p>Links :</p>
+        @for (item of DominicResumeData.links; track item) 
+        {
+            <li><a href="{{item}}">{{item}}</a></li>
+        } @empty 
+        {
+            <li>There are no links.</li>
+        }
+        
+        
+        
+
+    </div>
+</div>
