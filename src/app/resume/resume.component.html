@@ -13,31 +13,38 @@
         <h3>Certificates :</h3>
         <app-certificates></app-certificates>
         <p></p>
+        <h3>Salary : {{ DominicResumeData.salary| currency}}</h3>
+        <h3 *ngIf="DominicResumeData.power!= -1">Power : {{DominicResumeData.power| percent }}</h3>
+        
         <h3>Expearens :</h3>
-        @for (item of DominicResumeData.experience; track item) 
-        {
-            <li>{{ item}}</li>
-        } @empty 
-        {
-            <li>There are no expearens.</li>
-        }
+        
+        <ul>
+            <li *ngFor="let item of DominicResumeData.experience">
+                {{item}}
+            </li>
+        </ul>
+
+        <div [ngSwitch]="DominicResumeData.experience.length">
+            <p *ngSwitchCase="0">little work experience</p>
+            <p *ngSwitchCase="1">little work experience</p>
+            <p *ngSwitchCase="2">normal work experience</p>
+            <p *ngSwitchCase="3">normal work experience</p>
+            <p *ngSwitchDefault>high work experience</p>
+          </div>
+
         <p></p>
         <h3>Skills :</h3>
-        @for (item of DominicResumeData.skills; track item) 
-        {
-            <li>{{ item}}</li>
-        } @empty 
-        {
-            <li>There are no skills.</li>
-        }
+        <ul>
+            <li *ngFor="let item of DominicResumeData.skills">
+                {{item}}
+            </li>
+        </ul>
         <p>Links :</p>
-        @for (item of DominicResumeData.links; track item) 
-        {
-            <li><a href="{{item}}">{{item}}</a></li>
-        } @empty 
-        {
-            <li>There are no links.</li>
-        }
+        <ul>
+            <li *ngFor="let item of DominicResumeData.links">
+                {{item}}
+            </li>
+        </ul>
         
         
         
